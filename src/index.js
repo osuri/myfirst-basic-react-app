@@ -1,17 +1,45 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import CardList from './components/cardList/cardList';
+import SearchComponent  from './components/searchComponent/searchComponent';
+import'./index.css';
 
+class App extends Component {
+    constructor(){
+        super();
+        this.state = {
+            users: [],
+            searchField: '',
+        }
+    }
+    componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response)=>response.json())
+    .then(users => this.setState({
+        users: users
+    }))
+    .catch(error=> console.log(error))
+    }
+    handleChange = e => {
+        this.setState({searchField: e.target.value})
+    }
+    
+        render() {
+        const { users, searchField } = this.state;
+        const filtererdUsers = users.filter(user=>user.name.toLowerCase().includes(searchField.toLowerCase()))
+        console.log(searchField, 'fil')
+        return (
+        <div className='App'>
+        <h1>Monsters Rolodex</h1>
+        <SearchComponent   
+        placeholder='search monster' 
+        handleChange={this.handleChange} />
+        <CardList users={filtererdUsers} />
+        </div>
+        );
+    }
+}
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />,
+    document.querySelector('#root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
