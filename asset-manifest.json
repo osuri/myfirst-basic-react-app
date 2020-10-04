@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/osuri/myfirst-basic-react-app/static/css/main.ad29733d.chunk.css",
+    "main.js": "/osuri/myfirst-basic-react-app/static/js/main.4d9b4b57.chunk.js",
+    "main.js.map": "/osuri/myfirst-basic-react-app/static/js/main.4d9b4b57.chunk.js.map",
+    "runtime-main.js": "/osuri/myfirst-basic-react-app/static/js/runtime-main.b0f09a5f.js",
+    "runtime-main.js.map": "/osuri/myfirst-basic-react-app/static/js/runtime-main.b0f09a5f.js.map",
+    "static/js/2.1999375b.chunk.js": "/osuri/myfirst-basic-react-app/static/js/2.1999375b.chunk.js",
+    "static/js/2.1999375b.chunk.js.map": "/osuri/myfirst-basic-react-app/static/js/2.1999375b.chunk.js.map",
+    "index.html": "/osuri/myfirst-basic-react-app/index.html",
+    "precache-manifest.9e4445cc50121d4124641f435febb877.js": "/osuri/myfirst-basic-react-app/precache-manifest.9e4445cc50121d4124641f435febb877.js",
+    "service-worker.js": "/osuri/myfirst-basic-react-app/service-worker.js",
+    "static/css/main.ad29733d.chunk.css.map": "/osuri/myfirst-basic-react-app/static/css/main.ad29733d.chunk.css.map",
+    "static/js/2.1999375b.chunk.js.LICENSE.txt": "/osuri/myfirst-basic-react-app/static/js/2.1999375b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0f09a5f.js",
+    "static/js/2.1999375b.chunk.js",
+    "static/css/main.ad29733d.chunk.css",
+    "static/js/main.4d9b4b57.chunk.js"
+  ]
+}
